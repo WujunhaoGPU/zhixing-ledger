@@ -2,6 +2,8 @@
 
 把 AI 学习对话整理成可复习、可追溯的能力卡。
 
+**[下载 v0.6.0 安装包](https://github.com/WujunhaoGPU/zhixing-ledger/releases/download/v0.6.0/ability-ledger-v0.6.0.zip)** · [Release 与校验文件](https://github.com/WujunhaoGPU/zhixing-ledger/releases/tag/v0.6.0) · [安装说明](https://github.com/WujunhaoGPU/zhixing-ledger/releases/download/v0.6.0/INSTALL-v0.6.0.md)
+
 Local-first Chrome / Edge learning ledger: capture learning, practice recall, review with FSRS, and keep evidence of application.
 
 知行簿是独立的 Manifest V3 浏览器扩展，配有可选的 Python 本地训练服务。它将学习材料、自己的回答、反馈和复习记录保存在浏览器本地，让下一次学习从已有记录继续。
@@ -17,18 +19,17 @@ Local-first Chrome / Edge learning ledger: capture learning, practice recall, re
 
 ## 安装与第一次学习
 
-详见 [安装说明](docs/INSTALL.md) 与 [使用手册](docs/ability-ledger-quick-start.md)。
+普通使用请优先下载 **[v0.6.0 插件安装包](https://github.com/WujunhaoGPU/zhixing-ledger/releases/download/v0.6.0/ability-ledger-v0.6.0.zip)**，完整步骤见 [Release 安装说明](https://github.com/WujunhaoGPU/zhixing-ledger/releases/download/v0.6.0/INSTALL-v0.6.0.md)。
 
-1. 下载并解压本仓库源码，或克隆：
-   ```sh
-   git clone https://github.com/WujunhaoGPU/zhixing-ledger.git
-   cd zhixing-ledger
-   ```
-2. 在 Chrome 的 `chrome://extensions` 或 Edge 的 `edge://extensions` 开启开发者模式，点击“加载已解压的扩展程序”，选择 `src/ability-ledger-extension`。
-3. 打开 https://chatgpt.com ，点击知行簿扩展图标，跟随新手指南。
-4. 复制收录提示词给 ChatGPT，将返回的 `knowledge_ledger_update` 捕获或粘贴到知行簿，检查预览再确认。
+1. 下载 `ability-ledger-v0.6.0.zip` 并解压。
+2. 在 Chrome 的 `chrome://extensions` 或 Edge 的 `edge://extensions` 开启开发者模式，点击“加载已解压的扩展程序”。
+3. 选择解压后直接包含 `manifest.json` 的 `ability-ledger-v0.6.0` 文件夹。
+4. 打开 https://chatgpt.com ，点击知行簿扩展图标，跟随新手指南。
+5. 复制收录提示词给 ChatGPT，将返回的 `knowledge_ledger_update` 捕获或粘贴到知行簿，检查预览再确认。后续流程见包内 `USER-GUIDE.md` 或 [使用手册](docs/ability-ledger-quick-start.md)。
 
-手动 ChatGPT 学习流程无需 Node.js、Python 或 DeepSeek API Key。浏览器依赖已随源码提供；无需构建。
+手动 ChatGPT 学习流程无需 Node.js、Python 或 DeepSeek API Key；无需构建。本版本使用开发者模式安装，尚未上架浏览器商店。
+
+开发者也可克隆源码，按 [源码安装说明](docs/INSTALL.md) 加载 `src/ability-ledger-extension`。Release 安装包与 GitHub 自动生成的 Source code ZIP 目录不同，请按所下载文件对应的说明选择文件夹。
 
 ## 可选：在插件内训练
 
