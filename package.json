@@ -1,0 +1,27 @@
+{
+  "name": "zhixing-ledger",
+  "version": "0.6.0",
+  "type": "module",
+  "scripts": {
+    "test:ledger": "node scripts/validate-ability-ledger.mjs",
+    "smoke:ledger": "node scripts/smoke-ability-ledger.mjs",
+    "package:ledger": "node scripts/package-ability-ledger.mjs",
+    "start:codex": "sh scripts/start-zhixing-service.sh",
+    "test:codex": "node scripts/test-codex-training.mjs && sh scripts/test-zhixing-service.sh",
+    "smoke:codex": "node scripts/smoke-codex-training.mjs",
+    "test": "npm run test:ledger && npm run test:codex"
+  },
+  "dependencies": {
+    "cytoscape": "^3.34.1",
+    "ts-fsrs": "^5.4.1"
+  },
+  "description": "Local-first learning ledger with evidence-based review and knowledge maps",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WujunhaoGPU/zhixing-ledger.git"
+  }
+}

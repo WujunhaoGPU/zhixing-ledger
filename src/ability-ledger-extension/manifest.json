@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "知行簿",
+  "short_name": "知行簿",
+  "description": "把 AI 对话结算成台账、技能卡、复习计划和可探索知识树的本地助手。",
+  "version": "0.6.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "downloads",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://api.deepseek.com/*",
+    "http://127.0.0.1:17643/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "assets/brand/icon-16.png",
+    "32": "assets/brand/icon-32.png",
+    "48": "assets/brand/icon-48.png",
+    "128": "assets/brand/icon-128.png"
+  },
+  "action": {
+    "default_title": "知行簿",
+    "default_icon": {
+      "16": "assets/brand/icon-16.png",
+      "32": "assets/brand/icon-32.png",
+      "48": "assets/brand/icon-48.png",
+      "128": "assets/brand/icon-128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "shared/*.js"
+      ],
+      "matches": [
+        "https://chatgpt.com/*"
+      ]
+    }
+  ]
+}
